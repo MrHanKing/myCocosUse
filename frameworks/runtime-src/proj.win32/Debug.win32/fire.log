@@ -1,45 +1,46 @@
-﻿生成启动时间为 2017/11/26 16:24:02。
-     1>项目“E:\myCocos\fire\frameworks\runtime-src\proj.win32\fire.vcxproj”在节点 2 上(Build 个目标)。
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\fire.exe) does not match the Linker's OutputFile property value (E:\myCocos\fire\simulator\win32\fire.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+﻿生成启动时间为 2017/11/26 21:13:23。
+     1>项目“D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\fire.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\fire.exe) does not match the Linker's OutputFile property value (D:\study_javaScript\myCocosUse\simulator\win32\fire.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      1>PreLinkEvent:
-         if not exist "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\" mkdir "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\"
-         xcopy /Y /Q "C:\Cocos\cocos2d-x\cocos2d-x-3.10\prebuilt\win32\*.*" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\"
+         if not exist "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\" mkdir "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\"
+         xcopy /Y /Q "C:\Cocos\cocos2d-x\cocos2d-x-3.10\prebuilt\win32\*.*" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\"
          
          :VCEnd
          复制了 60 个文件
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\myCocos\fire\frameworks\runtime-src\proj.win32\../../../simulator/win32/fire.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\\" /LIBPATH:"E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\\" libcurl_imp.lib "mozjs-33.lib" ws2_32.lib sqlite3.lib websockets.lib opengl32.lib glew32.lib libzlib.lib libwebp.lib libiconv.lib freetype.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\myCocos\fire\frameworks\runtime-src\proj.win32\../../../simulator/win32/fire.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\fire.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\../../../simulator/win32/fire.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\\" /LIBPATH:"D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\\" libcurl_imp.lib "mozjs-33.lib" ws2_32.lib sqlite3.lib websockets.lib opengl32.lib glew32.lib libzlib.lib libwebp.lib libiconv.lib freetype.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\../../../simulator/win32/fire.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\fire.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
          Debug.win32\RuntimeJsImpl.obj
          Debug.win32\SimpleConfigParser.obj
          Debug.win32\main.obj
          Debug.win32\AppDelegate.obj
          Debug.win32\SimulatorWin.obj
      1>RuntimeJsImpl.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:LBR”规范)
-            正在创建库 E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\fire.lib 和对象 E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\fire.exp
-         fire.vcxproj -> E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\fire.exe
+            正在创建库 D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\fire.lib 和对象 D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\fire.exp
+         fire.vcxproj -> D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\fire.exe
        CustomBuildStep:
-         if not exist "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32" mkdir "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32"
-         xcopy "C:\Cocos\cocos2d-x\cocos2d-x-3.10\cocos\scripting\js-bindings\script" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32\script" /D /E /I /F /Y
-         xcopy "E:\myCocos\fire\frameworks\runtime-src\proj.win32\..\..\..\src" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32\src" /D /E /I /F /Y
-         xcopy "E:\myCocos\fire\frameworks\runtime-src\proj.win32\..\..\..\res" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32\res" /D /E /I /F /Y
-         copy "E:\myCocos\fire\frameworks\runtime-src\proj.win32\..\..\..\main.js" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32" /Y
-         copy "E:\myCocos\fire\frameworks\runtime-src\proj.win32\..\..\..\project.json" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32" /Y
-         xcopy /Y /Q "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\*.dll" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32"
-         xcopy /Y /Q "E:\myCocos\fire\frameworks\runtime-src\proj.win32\..\Classes\ide-support\lang" "E:\myCocos\fire\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32"
+         if not exist "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32" mkdir "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32"
+         xcopy "C:\Cocos\cocos2d-x\cocos2d-x-3.10\cocos\scripting\js-bindings\script" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32\script" /D /E /I /F /Y
+         xcopy "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\..\..\..\src" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32\src" /D /E /I /F /Y
+         xcopy "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\..\..\..\res" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32\res" /D /E /I /F /Y
+         copy "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\..\..\..\main.js" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32" /Y
+         copy "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\..\..\..\project.json" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32" /Y
+         xcopy /Y /Q "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\*.dll" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32"
+         xcopy /Y /Q "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\..\Classes\ide-support\lang" "D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\../../../../simulator/win32"
          :VCEnd
-         C:\Cocos\cocos2d-x\cocos2d-x-3.10\cocos\scripting\js-bindings\script\debugger\README.md -> E:\myCocos\fire\simulator\win32\script\debugger\README.md
+         C:\Cocos\cocos2d-x\cocos2d-x-3.10\cocos\scripting\js-bindings\script\debugger\README.md -> D:\study_javaScript\myCocosUse\simulator\win32\script\debugger\README.md
          复制了 1 个文件
-         E:\myCocos\fire\src\MyScene.js -> E:\myCocos\fire\simulator\win32\src\MyScene.js
+         D:\study_javaScript\myCocosUse\src\Splash.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\Splash.js
          复制了 1 个文件
-         E:\myCocos\fire\res\MainScene.json -> E:\myCocos\fire\simulator\win32\res\MainScene.json
-         E:\myCocos\fire\res\ToTry.json -> E:\myCocos\fire\simulator\win32\res\ToTry.json
-         复制了 2 个文件
+         D:\study_javaScript\myCocosUse\res\MainScene.json -> D:\study_javaScript\myCocosUse\simulator\win32\res\MainScene.json
+         D:\study_javaScript\myCocosUse\res\Menu.json -> D:\study_javaScript\myCocosUse\simulator\win32\res\Menu.json
+         D:\study_javaScript\myCocosUse\res\ToTry.json -> D:\study_javaScript\myCocosUse\simulator\win32\res\ToTry.json
+         复制了 3 个文件
          已复制         1 个文件。
          已复制         1 个文件。
          复制了 16 个文件
          复制了 1 个文件
-     1>已完成生成项目“E:\myCocos\fire\frameworks\runtime-src\proj.win32\fire.vcxproj”(Build 个目标)的操作。
+     1>已完成生成项目“D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\fire.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:16.41
+已用时间 00:00:09.41
