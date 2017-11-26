@@ -1,0 +1,13 @@
+<Solution>
+  <PropertyGroup Name="fire" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Image Name="HelloWorld.png" />
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="player.png" />
+        <Project Name="ToTry.csd" Type="Scene" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
