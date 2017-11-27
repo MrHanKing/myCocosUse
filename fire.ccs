@@ -8,6 +8,7 @@
         <Project Name="Menu.csd" Type="Scene" />
         <Image Name="player.png" />
         <Project Name="ToTry.csd" Type="Scene" />
+        <Project Name="GameScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

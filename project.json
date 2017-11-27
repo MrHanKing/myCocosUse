@@ -15,6 +15,7 @@
         "src/resource.js",
         "src/app.js",
         "src/Splash.js",
-        "src/Menu.js"
+        "src/Menu.js",
+        "src/GameScene.js"
     ]
 }
