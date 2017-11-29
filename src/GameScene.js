@@ -20,27 +20,12 @@ var GameScene = cc.Scene.extend({
 
         this.speed = 1;
 
-        this.player = ccui.helper.seekWidgetByName(this.ui, "player");
+        this.player = new Player(res.Player_png);
         var playerSize = this.player.getContentSize();
         this.player.setPosition(cc.p(playerSize.height / 2 + 20, bgSize.height / 2));
-        this.player.setLocalZOrder(2);
-        
-        this.hahaha();
-    },
+        this.ui.addChild(this.player, 2)
 
-    hahaha:function() {
-        var listener = cc.EventListener.create({
-            event: cc.EventListener.KEYBOARD,
-            onKeyPressed: function (keyCode, event) {
-                cc.log("keyPressed keyCode:", keyCode);
-                cc.log("keyPressed:", event);
-            },
-            onKeyReleased: function (keyCode, event) {
-                cc.log("KeyReleased keyCode:", keyCode);
-                cc.log("KeyReleased:", event);
-            },
-        });
-        cc.eventManager.addListener(listener, this.player);
+        this.creatEnemys(5);
     },
 
     onEnter:function(params) {
@@ -68,5 +53,17 @@ var GameScene = cc.Scene.extend({
 
     setSprite1AfterSprite2:function(Sprite1 ,Sprite2) {
         Sprite1.x = Sprite2.getPosition().x + Sprite2.getContentSize().width;
+    },
+
+    creatEnemys:function(num) {
+        for (var index = 0; index < num; index++) {
+            var resName = "enemy" + Math.ceil(Math.random() * 5) + "_png";
+            var filename = res[resName];
+            cc.log(resName,filename)
+            var enemy = new Enemy(filename)
+            enemy.setPosition(cc.p(cc.winSize.width, index * 120 + 50))
+            this.ui.addChild(enemy, 3);
+        }
     }
 })
+

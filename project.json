@@ -16,6 +16,9 @@
         "src/app.js",
         "src/Splash.js",
         "src/Menu.js",
-        "src/GameScene.js"
+        "src/GameScene.js",
+        "src/Player.js",
+        "src/Enemy.js",
+        "src/config.js"
     ]
 }

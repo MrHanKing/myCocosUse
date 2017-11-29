@@ -3,12 +3,17 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Image Name="enemy1.png" />
+        <Image Name="enemy2.png" />
+        <Image Name="enemy3.png" />
+        <Image Name="enemy4.png" />
+        <Image Name="enemy5.png" />
+        <Project Name="GameScene.csd" Type="Scene" />
         <Image Name="HelloWorld.png" />
         <Project Name="MainScene.csd" Type="Scene" />
         <Project Name="Menu.csd" Type="Scene" />
         <Image Name="player.png" />
         <Project Name="ToTry.csd" Type="Scene" />
-        <Project Name="GameScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
