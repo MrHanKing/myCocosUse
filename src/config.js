@@ -1,5 +1,7 @@
 var config = {
     playerSpeed : 5,
     enemySpeedMax : 5,
-    enemySpeedMin : 2
+    enemySpeedMin : 2,
+    playerFireCD : 10,
+    enemyFireCD : 60
 };

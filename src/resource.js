@@ -6,6 +6,7 @@ var res = {
     enemy3_png : "res/enemy3.png",
     enemy4_png : "res/enemy4.png",
     enemy5_png : "res/enemy5.png",
+    Bullet_png : "res/dan.png",
     MainScene_json : "res/MainScene.json",
     ToTry_json : "res/ToTry.json",
     Menu_json : "res/Menu.json",

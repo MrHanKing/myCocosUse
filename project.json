@@ -19,6 +19,8 @@
         "src/GameScene.js",
         "src/Player.js",
         "src/Enemy.js",
-        "src/config.js"
+        "src/Bullet.js",
+        "src/config.js",
+        "src/myUtilty.js"
     ]
 }

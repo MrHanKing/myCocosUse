@@ -6,6 +6,12 @@ var GameScene = cc.Scene.extend({
 
     init:function () {
         this.ui = ccs.load(res.Game_json).node;
+        this.enemysPool = [];
+        this.bulletsPool = [];
+        this.enemys = [];
+        this.enemysBullets = [];
+        this.playerBullets = [];
+
         this.addChild(this.ui);
         this.bg = ccui.helper.seekWidgetByName(this.ui, "bg");
         this.bg.setTexture(res.HelloWorld_png);
@@ -20,7 +26,7 @@ var GameScene = cc.Scene.extend({
 
         this.speed = 1;
 
-        this.player = new Player(res.Player_png);
+        this.player = new Player(res.Player_png, this);
         var playerSize = this.player.getContentSize();
         this.player.setPosition(cc.p(playerSize.height / 2 + 20, bgSize.height / 2));
         this.ui.addChild(this.player, 2)
@@ -60,10 +66,13 @@ var GameScene = cc.Scene.extend({
             var resName = "enemy" + Math.ceil(Math.random() * 5) + "_png";
             var filename = res[resName];
             cc.log(resName,filename)
-            var enemy = new Enemy(filename)
+            var enemy = new Enemy(filename, this)
             enemy.setPosition(cc.p(cc.winSize.width, index * 120 + 50))
             this.ui.addChild(enemy, 3);
+            this.enemys.push(enemy);
         }
-    }
+    },
+
+
 })
 

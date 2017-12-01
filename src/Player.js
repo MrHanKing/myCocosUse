@@ -1,17 +1,23 @@
 var Player = cc.Sprite.extend({
-    ctor:function(filename) {
+    ctor:function(filename, scene) {
         this._super();
         this.setProperty(filename);
+        this.scene = scene;
     },
 
     setProperty:function(filename) {
         this.setTexture(filename);
         this.setRotation(90);
+
+        // 飞机类型，1为玩家，2为敌人
+        this.planeType = 1;
         this.toUp = false;
         this.toDown = false;
         this.toLeft = false;
         this.toRight = false;
         this.speed = config.playerSpeed;
+
+        this.resetFireCD();
     },
 
     onEnter:function() {
@@ -28,6 +34,7 @@ var Player = cc.Sprite.extend({
 
     update:function(dt) {
         this._super();
+        this.fireCD--;
         if (this.toUp) {
             this.y += this.speed;
         }
@@ -40,6 +47,21 @@ var Player = cc.Sprite.extend({
         if (this.toRight) {
             this.x += this.speed;
         }
+    },
+
+    fire:function() {
+        if (this.fireCD > 0) {
+            return;
+        }
+        this.resetFireCD();
+        var bullt = this.scene.bulletsPool.pop() || new Bullet(this);
+        cc.log("haha",bullt);
+        this.scene.ui.addChild(bullt, 10);
+        this.scene.playerBullets.push(bullt);
+    },
+
+    resetFireCD:function() {
+        this.fireCD = config.playerFireCD;
     },
 
     creatEventListener:function() {
@@ -64,7 +86,10 @@ var Player = cc.Sprite.extend({
                         this.toUp = false;
                         this.toDown = true;
                         break;
-                    
+                    case 32:
+                        this.fire();
+                        break;
+
                     default:
                         break;
                 }
