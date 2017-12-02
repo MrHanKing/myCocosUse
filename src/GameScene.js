@@ -50,6 +50,11 @@ var GameScene = cc.Scene.extend({
         if (this.bg1.x + this.bg1.width <= 0) {
             this.setSprite1AfterSprite2(this.bg1, this.bg);
         }
+
+        if (this.enemys.length < 5) {
+            cc.log("创造敌人")
+            this.creatEnemys(5 - this.enemys.length);
+        }
     },
 
     onExit:function() {
@@ -65,14 +70,37 @@ var GameScene = cc.Scene.extend({
         for (var index = 0; index < num; index++) {
             var resName = "enemy" + Math.ceil(Math.random() * 5) + "_png";
             var filename = res[resName];
-            cc.log(resName,filename)
-            var enemy = new Enemy(filename, this)
-            enemy.setPosition(cc.p(cc.winSize.width, index * 120 + 50))
+            if (this.enemysPool.length > 0) {
+                var enemy = this.enemysPool.pop();
+                enemy.refreshEnemy(filename);
+            } else {
+                var enemy = new Enemy(filename, this);
+            }
+            // cc.log(resName,filename)
             this.ui.addChild(enemy, 3);
             this.enemys.push(enemy);
         }
     },
 
-
+    removeElement:function(object) {
+        if (object.planeType == 2) {
+            this.enemys = this.enemys.filter(function(element) {
+                return !(object.__instanceId == element.__instanceId)
+            })
+            return;
+        }
+        if (object.plane.planeType == 1) {
+            this.playerBullets = this.playerBullets.filter(function(element) {
+                return !(object.__instanceId == element.__instanceId)
+            })
+            return;
+        }
+        if (object.plane.planeType == 2) {
+            this.enemysBullets = this.enemysBullets.filter(function(element) {
+                return !(object.__instanceId == element.__instanceId)
+            })
+            return;
+        }
+    }
 })
 

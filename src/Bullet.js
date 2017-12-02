@@ -3,6 +3,7 @@ var Bullet = cc.Sprite.extend({
         this._super();
         var filename = res.Bullet_png;
         this.plane = plane;
+        this.scene = plane.scene;
         this.setProperty(filename, plane);
     },
 
@@ -36,9 +37,14 @@ var Bullet = cc.Sprite.extend({
     update:function(dt) {
         this._super();
         this.x += this.speed;
+        var rect = cc.rect(0, 0, cc.winSize.width, cc.winSize.height);
+        if (!cc.rectContainsPoint(rect, this.getPosition())) {
+            this.scene.removeElement(this);
+            this.remove();
+        }
     },
 
     remove:function() {
-        this.removeFromParentAndCleanup(true);
+        this.removeFromParent();
     }
 })

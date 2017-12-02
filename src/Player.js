@@ -55,7 +55,7 @@ var Player = cc.Sprite.extend({
         }
         this.resetFireCD();
         var bullt = this.scene.bulletsPool.pop() || new Bullet(this);
-        cc.log("haha",bullt);
+        // cc.log("haha",bullt);
         this.scene.ui.addChild(bullt, 10);
         this.scene.playerBullets.push(bullt);
     },

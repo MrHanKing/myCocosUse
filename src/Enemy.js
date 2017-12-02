@@ -8,10 +8,8 @@ var Enemy = cc.Sprite.extend({
     setProperty:function(filename) {
         // 飞机类型，1为玩家，2为敌人
         this.planeType = 2;
-        this.resetFireCD();
-        this.setTexture(filename);
         this.setRotation(270);
-        this.speed = Math.random() * (config.enemySpeedMax - config.enemySpeedMin) + config.enemySpeedMin;
+        this.refreshEnemy(filename);
     },
 
     onEnter:function() {
@@ -34,8 +32,10 @@ var Enemy = cc.Sprite.extend({
             this.fire();
         }
 
-        if (this.isCollectwithBullet()) {
+        if (this.isCollectwithBullet() || (this.x + this.width < 0)) {
             this.scene.enemysPool.push(this)
+            cc.log("删除敌方飞机")
+            this.scene.removeElement(this)
             this.removeFromParent()
         }
     },
@@ -43,7 +43,7 @@ var Enemy = cc.Sprite.extend({
     fire:function() {
         this.resetFireCD();
         var bullt = this.scene.bulletsPool.pop() || new Bullet(this);
-        this.scene.ui.addChild(bullt);
+        this.scene.ui.addChild(bullt, 3);
         this.scene.enemysBullets.push(bullt);
     },
 
@@ -57,10 +57,19 @@ var Enemy = cc.Sprite.extend({
         for ( var node of this.scene.playerBullets) {
             // cc.log(node);
             if (myUtility.rectCollect(node, this)) {
+                this.scene.removeElement(node)
                 node.remove();
                 return true;
             }
         }
         return false;
+    },
+
+    refreshEnemy:function(filename) {
+        this.setTexture(filename);
+        var index = Math.floor(Math.random() * 5)
+        this.setPosition(cc.p(cc.winSize.width, index * 120 + 50));
+        this.resetFireCD();
+        this.speed = Math.random() * (config.enemySpeedMax - config.enemySpeedMin) + config.enemySpeedMin;
     }
 })
