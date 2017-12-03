@@ -43,8 +43,8 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.0479,
-              "Y": 0.0719
+              "X": 1.0,
+              "Y": 1.0
             },
             "Tag": 7,
             "ActionTag": 2062077305,
@@ -54,6 +54,109 @@
             },
             "Name": "bg",
             "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 28,
+            "LabelText": "Text LabelText Label",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 650.0,
+              "Y": 618.4418
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 128,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.6771,
+              "Y": 0.9663
+            },
+            "PreSize": {
+              "X": 0.2917,
+              "Y": 0.0437
+            },
+            "LeftMargin": 650.0,
+            "RightMargin": 30.0,
+            "TopMargin": 7.5582,
+            "BottomMargin": 604.4418,
+            "Tag": 8,
+            "ActionTag": -237981693,
+            "Size": {
+              "X": 280.0,
+              "Y": 28.0
+            },
+            "Name": "Text_1",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 28,
+            "LabelText": "Text LabelText Label",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 35.0,
+              "Y": 618.442
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0365,
+              "Y": 0.9663
+            },
+            "PreSize": {
+              "X": 0.2917,
+              "Y": 0.0437
+            },
+            "LeftMargin": 35.0,
+            "RightMargin": 645.0,
+            "TopMargin": 7.558,
+            "BottomMargin": 604.442,
+            "Tag": 9,
+            "ActionTag": 2147234511,
+            "Size": {
+              "X": 280.0,
+              "Y": 28.0
+            },
+            "Name": "Text_2",
+            "ctype": "TextObjectData"
           }
         ],
         "Size": {

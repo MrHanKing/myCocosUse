@@ -16,6 +16,7 @@ var Player = cc.Sprite.extend({
         this.toLeft = false;
         this.toRight = false;
         this.speed = config.playerSpeed;
+        this.life = config.playerLife;
 
         this.resetFireCD();
     },
@@ -46,6 +47,17 @@ var Player = cc.Sprite.extend({
         }
         if (this.toRight) {
             this.x += this.speed;
+        }
+
+        if (this.isCollectwithBullet()) {
+            cc.log("我方飞机中弹")
+            this.life--;
+            this.scene.refreshShowLife();
+            cc.log("生命剩余：",this.life);
+            if (this.life <= 0) {
+                this.removeFromParent();
+                this.scene.gameOver = true;
+            }
         }
     },
 
@@ -119,5 +131,16 @@ var Player = cc.Sprite.extend({
 
     removeEventListener:function() {
         cc.eventManager.removeListener(this.listener);
-    }
+    },
+
+    isCollectwithBullet:function() {
+        for ( var node of this.scene.enemysBullets) {
+            if (myUtility.rectCollect(node, this)) {
+                this.scene.removeElement(node)
+                node.remove();
+                return true;
+            }
+        }
+        return false;
+    },
 })

@@ -15,6 +15,149 @@
         "Tag": 6,
         "Children": [
           {
+            "FontSize": 20,
+            "LabelText": "Ps：config文件可修改配置",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 247.5861,
+              "Y": 269.3588
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2579,
+              "Y": 0.4209
+            },
+            "PreSize": {
+              "X": 0.25,
+              "Y": 0.0312
+            },
+            "LeftMargin": 127.5861,
+            "RightMargin": 592.4139,
+            "TopMargin": 360.6412,
+            "BottomMargin": 259.3588,
+            "Tag": 5,
+            "ActionTag": -415666159,
+            "Size": {
+              "X": 240.0,
+              "Y": 20.0
+            },
+            "Name": "Text_2",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "  控制飞机\nW          向上\nS          向下\nA          向左\nD          向右\n空格      发射子弹",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 255.2867,
+              "Y": 420.7657
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2659,
+              "Y": 0.6574
+            },
+            "PreSize": {
+              "X": 0.1875,
+              "Y": 0.1875
+            },
+            "LeftMargin": 165.2867,
+            "RightMargin": 614.7133,
+            "TopMargin": 159.2343,
+            "BottomMargin": 360.7657,
+            "Tag": 4,
+            "ActionTag": 1639806774,
+            "Size": {
+              "X": 180.0,
+              "Y": 120.0
+            },
+            "Name": "Text_1",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "player.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 223.6122,
+              "Y": 510.0759
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2329,
+              "Y": 0.797
+            },
+            "PreSize": {
+              "X": 0.0521,
+              "Y": 0.0625
+            },
+            "LeftMargin": 198.6122,
+            "RightMargin": 711.3878,
+            "TopMargin": 109.9241,
+            "BottomMargin": 490.0759,
+            "Tag": 5,
+            "ActionTag": -400594538,
+            "Size": {
+              "X": 50.0,
+              "Y": 40.0
+            },
+            "Name": "Sprite_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
             "FontSize": 14,
             "ButtonText": "开始游戏",
             "TextColor": {
@@ -59,8 +202,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 478.2021,
-              "Y": 304.3286
+              "X": 506.3507,
+              "Y": 418.1
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -69,17 +212,17 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.4981,
-              "Y": 0.4755
+              "X": 0.5274,
+              "Y": 0.6533
             },
             "PreSize": {
               "X": 0.1042,
               "Y": 0.0938
             },
-            "LeftMargin": 428.2021,
-            "RightMargin": 431.798,
-            "TopMargin": 305.6714,
-            "BottomMargin": 274.3286,
+            "LeftMargin": 456.3507,
+            "RightMargin": 403.6493,
+            "TopMargin": 191.9,
+            "BottomMargin": 388.1,
             "Tag": 7,
             "ActionTag": -745747329,
             "Size": {
@@ -100,7 +243,8 @@
       "UsedResources": [
         "Default/Button_Disable.png",
         "Default/Button_Normal.png",
-        "Default/Button_Press.png"
+        "Default/Button_Press.png",
+        "player.png"
       ],
       "ctype": "GameFileData"
     }

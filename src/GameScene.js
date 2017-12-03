@@ -11,7 +11,13 @@ var GameScene = cc.Scene.extend({
         this.enemys = [];
         this.enemysBullets = [];
         this.playerBullets = [];
+        this.gameOver = false;
+        this.scoreNum = 0;
+        this.score = ccui.helper.seekWidgetByName(this.ui, "Text_1");
 
+        this.playerLife = ccui.helper.seekWidgetByName(this.ui, "Text_2");
+        
+        
         this.addChild(this.ui);
         this.bg = ccui.helper.seekWidgetByName(this.ui, "bg");
         this.bg.setTexture(res.HelloWorld_png);
@@ -22,7 +28,7 @@ var GameScene = cc.Scene.extend({
         this.bg1 = new cc.Sprite(res.HelloWorld_png);
         this.bg1.setAnchorPoint(cc.p(0, 0));
         this.bg1.setPosition(cc.p(bgSize.width, 0));
-        this.ui.addChild(this.bg1, 1);
+        this.ui.addChild(this.bg1, -1);
 
         this.speed = 1;
 
@@ -37,10 +43,16 @@ var GameScene = cc.Scene.extend({
     onEnter:function(params) {
         this._super();
         this.scheduleUpdate();
+        this.addScore(0);
+        this.refreshShowLife();
     },
 
     update:function(dt) {
         this._super();
+        if (this.gameOver) {
+            this.toMenu();
+            return;
+        }
         this.bg.x -= this.speed;
         this.bg1.x -= this.speed;
 
@@ -101,6 +113,21 @@ var GameScene = cc.Scene.extend({
             })
             return;
         }
+    },
+
+    toMenu:function() {
+        cc.director.runScene(new MenuScene());
+    },
+
+    
+    refreshShowLife:function() {
+        this.playerLife.string = "剩余生命：" + this.player.life;
+    },
+
+    
+    addScore:function(addscore) {
+        this.scoreNum += addscore;
+        this.score.string = "获得分数：" + this.scoreNum;
     }
 })
 

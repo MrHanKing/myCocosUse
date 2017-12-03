@@ -1,4 +1,4 @@
-﻿生成启动时间为 2017/11/26 21:13:23。
+﻿生成启动时间为 2017/12/3 16:01:24。
      1>项目“D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\fire.vcxproj”在节点 2 上(Build 个目标)。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(D:\study_javaScript\myCocosUse\frameworks\runtime-src\proj.win32\Debug.win32\fire.exe) does not match the Linker's OutputFile property value (D:\study_javaScript\myCocosUse\simulator\win32\fire.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
      1>PreLinkEvent:
@@ -29,12 +29,28 @@
          :VCEnd
          C:\Cocos\cocos2d-x\cocos2d-x-3.10\cocos\scripting\js-bindings\script\debugger\README.md -> D:\study_javaScript\myCocosUse\simulator\win32\script\debugger\README.md
          复制了 1 个文件
+         D:\study_javaScript\myCocosUse\src\Bullet.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\Bullet.js
+         D:\study_javaScript\myCocosUse\src\config.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\config.js
+         D:\study_javaScript\myCocosUse\src\Enemy.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\Enemy.js
+         D:\study_javaScript\myCocosUse\src\GameScene.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\GameScene.js
+         D:\study_javaScript\myCocosUse\src\Menu.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\Menu.js
+         D:\study_javaScript\myCocosUse\src\MyParticle.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\MyParticle.js
+         D:\study_javaScript\myCocosUse\src\myUtilty.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\myUtilty.js
+         D:\study_javaScript\myCocosUse\src\Player.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\Player.js
+         D:\study_javaScript\myCocosUse\src\resource.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\resource.js
          D:\study_javaScript\myCocosUse\src\Splash.js -> D:\study_javaScript\myCocosUse\simulator\win32\src\Splash.js
-         复制了 1 个文件
+         复制了 10 个文件
+         D:\study_javaScript\myCocosUse\res\dan.png -> D:\study_javaScript\myCocosUse\simulator\win32\res\dan.png
+         D:\study_javaScript\myCocosUse\res\enemy1.png -> D:\study_javaScript\myCocosUse\simulator\win32\res\enemy1.png
+         D:\study_javaScript\myCocosUse\res\enemy2.png -> D:\study_javaScript\myCocosUse\simulator\win32\res\enemy2.png
+         D:\study_javaScript\myCocosUse\res\enemy3.png -> D:\study_javaScript\myCocosUse\simulator\win32\res\enemy3.png
+         D:\study_javaScript\myCocosUse\res\enemy4.png -> D:\study_javaScript\myCocosUse\simulator\win32\res\enemy4.png
+         D:\study_javaScript\myCocosUse\res\enemy5.png -> D:\study_javaScript\myCocosUse\simulator\win32\res\enemy5.png
+         D:\study_javaScript\myCocosUse\res\GameScene.json -> D:\study_javaScript\myCocosUse\simulator\win32\res\GameScene.json
          D:\study_javaScript\myCocosUse\res\MainScene.json -> D:\study_javaScript\myCocosUse\simulator\win32\res\MainScene.json
          D:\study_javaScript\myCocosUse\res\Menu.json -> D:\study_javaScript\myCocosUse\simulator\win32\res\Menu.json
          D:\study_javaScript\myCocosUse\res\ToTry.json -> D:\study_javaScript\myCocosUse\simulator\win32\res\ToTry.json
-         复制了 3 个文件
+         复制了 10 个文件
          已复制         1 个文件。
          已复制         1 个文件。
          复制了 16 个文件
@@ -43,4 +59,4 @@
 
 生成成功。
 
-已用时间 00:00:09.41
+已用时间 00:01:28.99

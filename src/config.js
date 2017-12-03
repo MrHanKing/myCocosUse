@@ -3,5 +3,6 @@ var config = {
     enemySpeedMax : 5,
     enemySpeedMin : 2,
     playerFireCD : 10,
-    enemyFireCD : 60
+    enemyFireCD : 60,
+    playerLife : 60
 };

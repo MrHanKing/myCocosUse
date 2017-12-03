@@ -38,15 +38,15 @@ var SplashScene = cc.Scene.extend({
 
     playSplash:function(node) {
         var s = this.splashList[0];
+        cc.log("splash")
+        cc.log(s)    
         if (s == undefined) {
             this.end();
             return;
         }
         this.img.loadTexture(s.res)
         this.duration = s.duration
-        cc.log("splash")
-        cc.log(s)       
-
+   
         node.setOpacity(0);
         var ac1 = cc.fadeIn(this.duration);
         var ac2 = cc.fadeOut(this.duration);

@@ -33,11 +33,25 @@ var Enemy = cc.Sprite.extend({
         }
 
         if (this.isCollectwithBullet() || (this.x + this.width < 0)) {
-            this.scene.enemysPool.push(this)
-            cc.log("删除敌方飞机")
-            this.scene.removeElement(this)
-            this.removeFromParent()
+            this.death();
         }
+    },
+
+    death:function() {
+        cc.log("删除敌方飞机")
+        // this.playBombParticle();
+        this.scene.enemysPool.push(this);
+        this.scene.removeElement(this);
+        this.removeFromParent();
+    },
+
+    playBombParticle:function() {
+        var e = new cc.ParticleSystemQuad("res/Default/defaultParticle.plist");
+        e.x = cc.winSize.width/2;
+        e.y = cc.winSize.height/2;
+        // cc.log(this.getPosition(), e);
+        this.scene.ui.addChild(e, 10);
+        // cc.log(e);
     },
 
     fire:function() {
@@ -57,7 +71,8 @@ var Enemy = cc.Sprite.extend({
         for ( var node of this.scene.playerBullets) {
             // cc.log(node);
             if (myUtility.rectCollect(node, this)) {
-                this.scene.removeElement(node)
+                this.scene.removeElement(node);
+                this.scene.addScore(this.score);
                 node.remove();
                 return true;
             }
@@ -66,6 +81,7 @@ var Enemy = cc.Sprite.extend({
     },
 
     refreshEnemy:function(filename) {
+        this.score = 50;
         this.setTexture(filename);
         var index = Math.floor(Math.random() * 5)
         this.setPosition(cc.p(cc.winSize.width, index * 120 + 50));
